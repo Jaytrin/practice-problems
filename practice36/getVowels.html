@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+//         ## Find the vowels
+
+// - given a string, find all the vowels in the string.  Store them in a new string
+// - example:
+// 	- parameters: "four score and seven years ago"
+// 	- return: "ouoeaeeeaao"
+
+// ### human-level instructions
+// - create variable to store vowels
+// - begin loop
+// 	- get each letter, one at a time
+// 	- compare it with each each vowel and see if it matches
+// 		- if it is, add it to the vowel variable
+// - repeat
+
+function findVowels(string){
+    let allVowels = "";
+    const vowels = {'a':true,'e':true,'i':true,'o':true,'u':true};
+    for(let i = 0; i < string.length; i++){
+        let letter = string[i];
+        if(vowels[letter]){
+            allVowels += string[i];
+        }
+    }
+    return allVowels;
+}
+
+console.log('findVowels("four score and seven years ago")', findVowels("four score and seven years ago"));
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

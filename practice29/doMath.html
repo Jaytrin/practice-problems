@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Build a function, do_math, that takes in 3 parameters: num1 (number), num2 (number), and operator (string)
+
+// - it uses the operator to determine what math to do to the numbers
+// 	- if '+', it adds them
+// 	- if '-', it subtracts them
+// 	- if '*' or 'x' or 'X', it multiplies them
+// 	- if '/', it divides them
+// - if then returns the result
+// - Example:
+// 	- do_math(5,2,'*')
+// 	- Return: 10
+
+function do_math(num1,num2,operator){
+    let answer = null;
+    switch(operator){
+        case "+":
+        answer = num1 + num2
+        break;
+        case "-":
+        answer = num1 - num2
+        break;
+        case "*":
+        case "x":
+        case "X":
+        answer = num1 * num2
+        break;
+        case "/":
+        if(num2 == 0){
+            answer = "denominator is 0";
+        } else {
+            answer = num1 / num2
+        }
+        break;
+        default:
+        answer = "No operator"
+    }
+    return answer
+}
+
+//TEST
+console.log(do_math(5,2,'+'))
+console.log(do_math(5,2,'-'))
+console.log(do_math(5,2,'*'))
+console.log(do_math(5,2,'/'))
+console.log(do_math(5,0,'/'))      
+console.log(do_math(5,0,''))      
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

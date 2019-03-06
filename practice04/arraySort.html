@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // ## Sort
+
+// Build a function that takes in an array of strings and outputs a new array with the same strings in alphabetical order. 
+
+// - Write a function that takes one parameter
+// 	- Parameter 1 - An Array of strings
+// - The function should output an array containing all the strings from the input array but in alphabetical order
+// - Example:
+// 	-`var myArray = ['mouse', 'cat', 'dog', 'human'];`
+// 	- `sort(myArray);`
+// 	- Output - `['cat', 'dog', 'human', 'mouse']`
+// - Try doing this using a **Bubble Sort**, if you are unsure what that is <a href="https://www.google.com" target="_blank">Click Here</a>
+
+function sortArray(stringArray){
+    const outputArray = []
+    // const status = {completed: false};
+    // const incrementor = {i: 0};
+
+    // while(!status.completed){
+    //     if(stringArray[incrementor.i] > stringArray[incrementor.i+1]){
+    //         let firstString = stringArray[incrementor.i];
+    //         stringArray[incrementor.i] = stringArray[incrementor.i+1];
+    //         stringArray[incrementor.i+1] = firstString;
+    //         incrementor.i = 0;
+    //     } else if(stringArray[incrementor.i + 1] === undefined){
+    //         status.completed = true;
+    //     } else{
+    //         incrementor.i++;
+    //     }
+    // }
+    for(let i = 0; i < stringArray.length; i++){
+        if(stringArray[i] > stringArray[i+1]){
+            let firstString = stringArray[i];
+            stringArray[i] = stringArray[i+1];
+            stringArray[i+1] = firstString;
+            i = -1;
+        }
+    }
+    return stringArray
+}
+
+var myArray = ['mouse', 'cat', 'dog', 'zebra', 'human', 'apple'];
+console.log(sortArray(myArray));
+
+
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

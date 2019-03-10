@@ -16,7 +16,6 @@
 
 function fibSequence(num){
     let output = [0,1];
-
     if(num > 1){
         for(let i = 2; i < num; i++){
         let nextNum = output[i-2] + output[i-1];
@@ -25,9 +24,7 @@ function fibSequence(num){
     }else{ 
         output = 'Please use number greater than 1';
     }
-    
     return output.join(' ');
-    
 }
 
 console.log(fibSequence(12));

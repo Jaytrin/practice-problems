@@ -16,15 +16,12 @@
 // 	- Output - `['cat','caterpillar','accurate','cactus']`
 
 function fittingWords (string, array){
-    let letters = "\[" + (string.split()).join(' ') + "\]";
+    const letterArray = string.split('');
+    const letters = (letterArray.map(x => "\(\?\=\.\*" + x + "\)")).join('')
     let regex = new RegExp(letters,"g");
-    const output = [];
+    console.log('letters',letters)
+    const output = array.filter(x => regex.test(x))
 
-    for(let i = 0; i < array.length; i++){
-        if(regex.test(array[i])){
-            output.push(array[i])
-        }
-    }    
     return output
 }
 

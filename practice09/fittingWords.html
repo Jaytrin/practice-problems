@@ -19,7 +19,6 @@ function fittingWords (string, array){
     const letterArray = string.split('');
     const letters = (letterArray.map(x => "\(\?\=\.\*" + x + "\)")).join('')
     let regex = new RegExp(letters,"g");
-    console.log('letters',letters)
     const output = array.filter(x => regex.test(x))
 
     return output

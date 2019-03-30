@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+//     # skippy_numbers
+
+// Given the following function call:
+// - skippy_numbers(2);
+
+// And the resulting output:
+// - [2,3,5,6,8,9,11,12];
+
+// Create a function definition that achieves the output with the given input. 
+
+// <a href="http://jsbin.com/vacogo/edit?html,js,output" target="_blank">Solution Set</a>
+
+function skippy_numbers(num){
+    const output = [];
+    output.push(num);
+    while(output.length < 8){
+        if(!(output.length % num)){
+            output.push(output[output.length - 1] + 2);
+        } else {
+            output.push(output[output.length - 1] + 1);
+        }
+    }
+    return output
+}
+
+console.log(skippy_numbers(3));
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

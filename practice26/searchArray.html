@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    //     Create a function, search_array(), that does the following:
+
+    // #### Input: 2 arrays
+    // - haystack array, which has values to search through
+    // - needle array, which has values to search for 
+    // #### Output: 
+    // - output array, which has all values in needle that are found in haystack
+    // #### Example:
+    // var haystack = ['cat','dog','bird','turtle','lizard'];
+    // var needle = ['dog','lizard','flower','monkey','unicorn']
+    // var output = null;
+
+    // output = search_array(haystack,needle);
+    // console.log(output); //outputs ['dog','lizard'];
+
+    function search_array(haystackArray, needleArray){
+        var outputArray = [];
+        for(var i = 0; i < haystackArray.length; i++){
+            for(var u = 0; u < needleArray.length; u++){
+                if(haystackArray[i] === needleArray[u]){
+                    outputArray.push(haystackArray[i])
+                }
+            }
+        }
+        return outputArray;
+    }
+
+   var haystack = ['cat','dog','bird','turtle','lizard'];
+    var needle = ['dog','lizard','flower','monkey','unicorn']
+    console.log(search_array(haystack,needle));
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
